@@ -12,15 +12,12 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   margin-bottom: 20px;
   border-radius: 15px;
   background-color: #f2f2f2;
   padding: 10px;
-  width: 100%;
+  width: 50%;
 }
-
-
 
 .section h2 {
   background-color: blue;
@@ -30,26 +27,14 @@ form {
   font-size: 18px;
   margin-bottom: 10px;
 }
-label {
-  font-size: 20px;
-  font-weight: bold;
-  color: blue;
-  margin-top: 10px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 
 table {
-  margin: 0 auto; /* Center horizontally */
+  margin: 0 auto;
   width: 100%;
-  max-width: 300px; /* Adjust the value as needed */
+  max-width: 400px;
   padding: 10px;
   table-layout: fixed;
-  text-align: center; /* Center text within cells */
 }
-
-
 
 th, td {
   border: 1px solid #ddd;
