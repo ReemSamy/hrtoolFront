@@ -1,11 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HRTool</title>
-</head>
-<body>
-  <h1>HR</h1>
-</body>
-</html>
+<form [formGroup]="form">
+  <div class="section">
+    <h2>Select Vacation Type</h2>
+    <mat-form-field>
+      <mat-label>Choose an option</mat-label>
+      <mat-select formControlName="vacationType">
+        <mat-option value="0">Annual</mat-option>
+        <mat-option value="1">Sick</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="section">
+    <h2>Create Vacation Details</h2>
+    <mat-form-field>
+      <mat-label>Start Date</mat-label>
+      <input matInput [matDatepicker]="picker1" formControlName="startDate" (dateChange)="CalculateDeductedDuration()">
+      <mat-error *ngIf="form.controls.startDate.hasError('required')">
+        Start Date is <strong>required</strong>
+      </mat-error>
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1 ></mat-datepicker>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>End Date</mat-label>
+      <input matInput [matDatepicker]="picker2" formControlName="endDate" (dateChange)="CalculateDeductedDuration()">
+      <mat-error *ngIf="form.controls.endDate.hasError('required')">
+        End Date is <strong>required</strong>
+      </mat-error>
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2 ></mat-datepicker>
+    </mat-form-field>
+    <br>
+    <label>Days: {{deductedDuration}}</label>
+    <br>
+    <button mat-raised-button color="primary" (click)="submitVacation($event)">Submit</button>
+  </div>
+</form>
+
+<div class="section">
+  <h2>Vacation Balances</h2>
+  <table>
+    <tr>
+      <th>Type</th>
+      <th>Balance</th>
+    </tr>
+    <tr>
+      <td>Annual</td>
+      <td>{{annualBalance}}</td>
+    </tr>
+    <tr>
+      <td>Sick</td>
+      <td>{{sickBalance}}</td>
+    </tr>
+  </table>
+</div>
