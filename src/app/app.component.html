@@ -1,4 +1,12 @@
-<form [formGroup]="form">
+<div *ngIf="!isEmployeeIdEntered">
+  <mat-form-field>
+    <mat-label>Select an option</mat-label>
+    <mat-select disableRipple  (selectionChange)="setUserId($event)">
+      <mat-option [value]="e.id" *ngFor="let e of allEmployees"> {{e.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<form [formGroup]="form" *ngIf="isEmployeeIdEntered">
   <div class="section">
     <h2>Select Vacation Type</h2>
     <mat-form-field>
@@ -39,8 +47,8 @@
   </div>
 </form>
 
-<div class="section">
-  <h2>Vacation Balances</h2>
+<div class="section" *ngIf="isEmployeeIdEntered">
+  <h2 >Vacation Balances</h2>
   <table>
     <tr>
       <th>Type</th>
