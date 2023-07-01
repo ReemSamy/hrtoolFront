@@ -1,4 +1,4 @@
-<div *ngIf="!isEmployeeIdEntered">
+<div *ngIf="!isEmployeeIdEntered" class="container2">
   <mat-form-field>
     <mat-label>Select an option</mat-label>
     <mat-select disableRipple  (selectionChange)="setUserId($event)">
@@ -48,7 +48,7 @@
 </form>
 
 <div class="section" *ngIf="isEmployeeIdEntered">
-  <h2 >Vacation Balances</h2>
+  <h2 class="label1" >Vacation Balances</h2>
   <table>
     <tr>
       <th>Type</th>

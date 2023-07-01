@@ -6,28 +6,22 @@ form {
   align-items: center;
   width: 100%;
   gap: 16px;
+  
 }
-
-/* .section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-  border-radius: 15px;
-  background-color: #f2f2f2;
-  padding: 10px;
-  width: 50%;
-} */
 
 .section h2 {
-  background-color: blue;
+  background-color: rgb(63 81 181);
   color: white;
-  padding: 10px;
-  border-radius: 15px;
+  padding: 7px;
+  border-radius: 23px;
   font-size: 18px;
-  margin-bottom: 10px;
-
+  margin-bottom: -17px;
+  margin-left: -600px;
+  padding-left: 29px;
+  padding-right: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow effect */
 }
+
 .section {
   display: flex;
   flex-direction: column;
@@ -36,33 +30,64 @@ form {
   border-radius: 92px;
   background-color: #f2f2f2;
   padding: 3px;
-  width: 53%;
+  width: 55%;
   flex-wrap: wrap;
   justify-content: center;
   padding-left: inherit;
   margin-left: 419px;
-  margin-right: 385px;
+  margin-right: 350px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+.mat-mdc-raised-button:not(:disabled) {
+  color: var(--mdc-protected-button-label-text-color, inherit);
+  border-radius: 17px;
+  height: 36px;
+  width: 143px;
+  font-size: large;
+  margin-left: -579px;
+  margin-top: -31px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow effect */
 }
 
 label {
   font-size: 20px;
   font-weight: bold;
-  color: blue;
+  color: rgb(217 34 61);
   margin-top: 10px;
   text-align: center;
   text-transform: uppercase;
+
+}
+.label1 {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(63 81 181);
+  margin-top: -2px;
+  text-align: center;
+  margin-right: -45px;
 }
 
 .container {
   display: flex;
   justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  margin: 267px;
+  border-radius: 39px;
+  background: #f3f3f3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 table {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px;
-  table-layout: fixed;
+  width: 40%;
+    max-width: 301px;
+    padding: 9px;
+    table-layout: fixed;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 th,
@@ -70,9 +95,9 @@ td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
+  font-weight: 500;
 }
 
 th {
   background-color: #f2f2f2;
 }
-
